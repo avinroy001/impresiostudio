@@ -7,15 +7,17 @@ import PhotographerCard from "../components/PhotographerCard";
 
 const CategoryListingPage = () => {
   const dispatch = useDispatch();
-  const { filtered, loading } = useSelector((state) => state.photographers);
+  const { filtered, loading, all } = useSelector((state) => state.photographers);
 
   useEffect(() => {
     dispatch(fetchPhotographers());
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(applyFilters());
-  }, [dispatch]);
+    if (all.length > 0) {
+      dispatch(applyFilters());
+    }
+  }, [dispatch, all]);
 
   return (
     <div className="listing-page">
@@ -25,14 +27,17 @@ const CategoryListingPage = () => {
         <div className="photographer-grid">
           {loading ? (
             <p>Loading...</p>
-          ) : (
+          ) : Array.isArray(filtered) && filtered.length > 0 ? (
             filtered.map((photographer) => (
               <PhotographerCard key={photographer.id} data={photographer} />
             ))
+          ) : (
+            <p>No photographers found.</p>
           )}
         </div>
       </div>
     </div>
   );
 };
+
 export default CategoryListingPage;
