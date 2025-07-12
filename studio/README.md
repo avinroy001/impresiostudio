@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+ImpresioStudio – Photographer Listing Platform
+------------------------------------------------
+A React-based web application to discover, filter, and book photographers based on location, style, price, and more. Built using Redux Toolkit for state management, and JSON server (or REST API) for data.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Setup Instructions
+-------------------
+1. Clone the Repository
+git clone https://github.com/avinroy001/impresiostudio.git
+cd impresiostudio
+2. Install Dependencies
+npm install
+3. Start JSON Server (Local Backend)
+Ensure db.json is present in the root.
 
-## Available Scripts
+npx json-server --watch db.json --port 3001
+Or use a hosted mock API like Vercel's /api/photographers
 
-In the project directory, you can run:
+4. Run the React App
+npm start
+The app will run at: https://impresiostudio.vercel.app
 
-### `npm start`
+Features
+----------
+* View all photographers
+* Filter by price, rating, city, styles
+* Keyword search with debounce
+* Sort by price or rating
+* View detailed photographer profiles
+* Portfolio and review sections
+* Send inquiry via modal form
+* Filtering & Logic
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Filters
+---------
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Filters are stored in Redux and applied dynamically via the applyFilters() reducer. Filtering supports:
 
-### `npm test`
+Price: Less than or equal to selected price
+Rating: Greater than or equal to
+City: Exact match
+Styles: All selected styles must match
+Search: Matches name, location, or tags
+if (search)
+  filtered = filtered.filter(
+    (p) =>
+      p.name.toLowerCase().includes(search.toLowerCase()) ||
+      p.location.toLowerCase().includes(search.toLowerCase()) ||
+      p.tags.some((t) =>
+        t.toLowerCase().includes(search.toLowerCase())
+      )
+  );
+Debounce
+-----------
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The SearchBar input uses setTimeout with clearTimeout to avoid triggering Redux filter logic on every keystroke, improving performance:
 
-### `npm run build`
+useEffect(() => {
+  const delay = setTimeout(() => {
+    dispatch(setFilters({ search: query }));
+    dispatch(applyFilters());
+  }, 300);
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  return () => clearTimeout(delay);
+}, [query]);
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Screenshots
+--------------
+(Add your screenshots here if you have them)
+Homepage with filter sidebar
+![Homepage Preview](./src/assets/Homescreen.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Photographer profile with reviews and gallery
+![Profile Preview](./src/assets/Photographer.png)
 
-### `npm run eject`
+Inquiry Modal popup
+![Enquery Preview](./src/assets/Enquery.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Tech Stack
+------------
+React (CRA)
+Redux Toolkit
+React Router DOM
+JSON Server for API simulation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Contact
+---------
+If you'd like to collaborate or have questions:
+avin.roy001@gmail.com
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
