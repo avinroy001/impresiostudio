@@ -1,0 +1,76 @@
+.tag {
+  display: inline-block;
+  background-color: #eaeaea;
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.photographer-card img {
+  border-radius: 8px;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.modal-content input,
+.modal-content textarea {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modal-content button {
+  margin-right: 0.5rem;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter-sidebar label {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.filter-sidebar select,
+.filter-sidebar input[type="range"] {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 4px;
+}
+
+.filter-sidebar button {
+  margin-top: 1rem;
+  background-color: #dc3545;
+}
+
+.filter-sidebar button:hover {
+  background-color: #c82333;
+}
