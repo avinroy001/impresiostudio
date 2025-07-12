@@ -9,8 +9,11 @@
       "styles": ["Outdoor", "Studio"],
       "tags": ["Candid", "Maternity"],
       "bio": "Award-winning studio specializing in maternity and newborn shoots.",
-      "profilePic": "/images/ravi.jpg",
-      "portfolio": ["/images/portfolio1.jpg", "/images/portfolio2.jpg"],
+      "profilePic": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+      "portfolio": [
+        "https://picsum.photos/id/1011/400/300",
+        "https://picsum.photos/id/1012/400/300"
+      ],
       "reviews": [
         {
           "name": "Ananya",
@@ -29,8 +32,11 @@
       "styles": ["Candid", "Indoor"],
       "tags": ["Newborn", "Birthday"],
       "bio": "Delhi-based candid specialist for kids and birthday parties.",
-      "profilePic": "/images/lensqueen.jpg",
-      "portfolio": ["/images/lens1.jpg", "/images/lens2.jpg"],
+      "profilePic": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+      "portfolio": [
+        "https://picsum.photos/id/1013/400/300",
+        "https://picsum.photos/id/1015/400/300"
+      ],
       "reviews": [
         {
           "name": "Priya",
@@ -49,8 +55,11 @@
       "styles": ["Studio", "Outdoor", "Traditional"],
       "tags": ["Wedding", "Pre-wedding"],
       "bio": "Capturing timeless wedding stories across India.",
-      "profilePic": "/images/clickfactory.jpg",
-      "portfolio": ["/images/wed1.jpg", "/images/wed2.jpg"],
+      "profilePic": "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7",
+      "portfolio": [
+        "https://picsum.photos/id/1016/400/300",
+        "https://picsum.photos/id/1018/400/300"
+      ],
       "reviews": [
         {
           "name": "Rahul",
@@ -69,8 +78,11 @@
       "styles": ["Outdoor", "Candid"],
       "tags": ["Maternity", "Couple"],
       "bio": "Natural light specialist focusing on emotional storytelling.",
-      "profilePic": "/images/neha.jpg",
-      "portfolio": ["/images/neha1.jpg", "/images/neha2.jpg"],
+      "profilePic": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c",
+      "portfolio": [
+        "https://picsum.photos/id/1019/400/300",
+        "https://picsum.photos/id/1020/400/300"
+      ],
       "reviews": [
         {
           "name": "Sneha",
@@ -89,14 +101,132 @@
       "styles": ["Studio"],
       "tags": ["Birthday", "Family"],
       "bio": "Affordable indoor shoots with creative themes.",
-      "profilePic": "/images/snapshot.jpg",
-      "portfolio": ["/images/snapshot1.jpg", "/images/snapshot2.jpg"],
+      "profilePic": "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
+      "portfolio": [
+        "https://picsum.photos/id/1021/400/300",
+        "https://picsum.photos/id/1022/400/300"
+      ],
       "reviews": [
         {
           "name": "Vikram",
           "rating": 3.5,
           "comment": "Decent service, could improve on punctuality.",
           "date": "2024-09-10"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Frames & Smiles",
+      "location": "Chennai",
+      "price": 9000,
+      "rating": 4.4,
+      "styles": ["Outdoor", "Candid"],
+      "tags": ["Engagement", "Pre-wedding"],
+      "bio": "Turning your moments into forever memories.",
+      "profilePic": "https://images.unsplash.com/photo-1557053910-d9eadeed1c58",
+      "portfolio": [
+        "https://picsum.photos/id/1024/400/300",
+        "https://picsum.photos/id/1025/400/300"
+      ],
+      "reviews": [
+        {
+          "name": "Karthik",
+          "rating": 4,
+          "comment": "Nice work, especially with candid shots.",
+          "date": "2025-02-10"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Pixel Play Studio",
+      "location": "Pune",
+      "price": 11000,
+      "rating": 4.7,
+      "styles": ["Studio", "Traditional"],
+      "tags": ["Kids", "Family"],
+      "bio": "Colorful memories for growing families.",
+      "profilePic": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+      "portfolio": [
+        "https://picsum.photos/id/1026/400/300",
+        "https://picsum.photos/id/1027/400/300"
+      ],
+      "reviews": [
+        {
+          "name": "Rina",
+          "rating": 4.5,
+          "comment": "My baby’s birthday photos were lovely.",
+          "date": "2024-08-25"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Timeless Tales",
+      "location": "Kolkata",
+      "price": 9500,
+      "rating": 4.1,
+      "styles": ["Candid"],
+      "tags": ["Wedding", "Couple"],
+      "bio": "Storytelling through the lens with elegance.",
+      "profilePic": "https://images.unsplash.com/photo-1504198458649-3128b932f49b",
+      "portfolio": [
+        "https://picsum.photos/id/1028/400/300",
+        "https://picsum.photos/id/1029/400/300"
+      ],
+      "reviews": [
+        {
+          "name": "Sourav",
+          "rating": 4.2,
+          "comment": "They were calm and creative throughout.",
+          "date": "2025-01-10"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Dream Clicks",
+      "location": "Ahmedabad",
+      "price": 6000,
+      "rating": 3.8,
+      "styles": ["Studio", "Outdoor"],
+      "tags": ["Birthday", "Engagement"],
+      "bio": "Capturing joy one click at a time.",
+      "profilePic": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce",
+      "portfolio": [
+        "https://picsum.photos/id/1030/400/300",
+        "https://picsum.photos/id/1031/400/300"
+      ],
+      "reviews": [
+        {
+          "name": "Payal",
+          "rating": 3.9,
+          "comment": "Affordable and reliable!",
+          "date": "2024-07-30"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Happy Moments Studio",
+      "location": "Jaipur",
+      "price": 10500,
+      "rating": 4.5,
+      "styles": ["Traditional", "Candid"],
+      "tags": ["Family", "Wedding"],
+      "bio": "Bringing heritage and emotions into frames.",
+      "profilePic": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
+      "portfolio": [
+        "https://picsum.photos/id/1032/400/300",
+        "https://picsum.photos/id/1033/400/300"
+      ],
+      "reviews": [
+        {
+          "name": "Ajay",
+          "rating": 5,
+          "comment": "Perfect blend of traditional and modern!",
+          "date": "2024-12-01"
         }
       ]
     }
